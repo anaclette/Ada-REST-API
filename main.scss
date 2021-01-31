@@ -1,0 +1,54 @@
+body {
+	background-color: limegreen;
+}
+
+@mixin letra($tamanio-letra, $tipografia, $color) {
+	font-size: $tamanio-letra;
+	font-family: $tipografia;
+	color: $color;
+}
+
+@mixin disenio-tarjeta($color-fondo, $radio) {
+	background-color: $color-fondo;
+	border-radius: $radio;
+}
+
+%centrar-info {
+	width: 600px;
+	height: 230px;
+	border-radius: 20px;
+	display: flex;
+	margin: 20px;
+}
+
+section {
+	display: flex;
+	flex-wrap: wrap;
+	article {
+		@extend %centrar-info;
+		@include disenio-tarjeta(rgb(49, 46, 46), 6px);
+		.imagen {
+			width: 40%;
+			overflow: hidden;
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+		.info {
+			padding: 20px;
+			@include letra(0.9em, "Verdana", #fff);
+			.estado {
+				display: flex;
+			}
+		}
+	}
+	p {
+		margin: 0;
+	}
+}
+
+a {
+	@include letra(2rem, 'Verdana', darkgreen);
+	cursor: pointer;
+}

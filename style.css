@@ -1,0 +1,49 @@
+body {
+  background-color: limegreen;
+}
+
+section article {
+  width: 600px;
+  height: 230px;
+  border-radius: 20px;
+  display: flex;
+  margin: 20px;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+}
+section article {
+  background-color: #312e2e;
+  border-radius: 6px;
+}
+section article .imagen {
+  width: 40%;
+  overflow: hidden;
+}
+section article .imagen img {
+  width: 100%;
+  height: auto;
+}
+section article .info {
+  padding: 20px;
+  font-size: 0.9em;
+  font-family: "Verdana";
+  color: #fff;
+}
+section article .info .estado {
+  display: flex;
+}
+section p {
+  margin: 0;
+}
+
+a {
+  font-size: 2rem;
+  font-family: "Verdana";
+  color: darkgreen;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=style.css.map */
